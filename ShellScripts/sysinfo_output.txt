@@ -1,0 +1,17 @@
+========================================
+System Information Report
+Name: Mayank Garg
+Roll No: 2601730194
+Date: 2026-11-25
+========================================
+CPU model: Intel(R) Core(TM) i5-8365U CPU @ 1.60GHz
+Logical CPU cores available: 8
+Memory: Total: 3.7Gi | Used: 484Mi
+
+Top 3 processes by CPU usage:
+    PID COMMAND         %CPU
+    943 bash            15.3
+      1 systemd          0.0
+     92 systemd-udevd    0.0
+
+Report generated successfully.
