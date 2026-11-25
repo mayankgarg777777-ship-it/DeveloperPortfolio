@@ -1,0 +1,54 @@
+$ ls -la ~
+total 44
+drwxr-x--- 7 vc   vc   4096 Nov  4 15:53 .
+drwxr-xr-x 3 root root 4096 Oct  7 16:43 ..
+-rw------- 1 vc   vc   2850 Nov  4 16:13 .bash_history
+-rw-r--r-- 1 vc   vc    220 Oct  7 16:43 .bash_logout
+-rw-r--r-- 1 vc   vc   3771 Oct  7 16:43 .bashrc
+drwxr-x--- 4 vc   vc   4096 Oct  7 16:46 .cache
+drwxr-x--- 4 vc   vc   4096 Oct 21 17:01 .config
+drwx------ 3 vc   vc   4096 Nov  4 04:16 .local
+-rw-rw-r-- 1 vc   vc      0 Nov 25 04:27 .motd_shown
+-rw-r--r-- 1 vc   vc    807 Oct  7 16:43 .profile
+drwxr-xr-x 2 vc   vc   4096 Nov  4 15:53 cse103_backups
+drwxr-xr-x 3 vc   vc   4096 Oct  7 16:55 cse103_lab
+
+$ ps aux | head -10
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.1  0.3  24272 15344 ?        Ss   21:07   0:00 /sbin/init
+root           2  0.0  0.0   3804  2504 hvc0     Sl+  21:07   0:00 /init
+root           3  0.0  0.0   3664  2140 hvc0     S+   21:07   0:00 init-watcher
+root           8  0.0  0.0   3804  2272 hvc0     Sl+  21:07   0:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+root          54  0.0  0.4  50676 18560 ?        S<s  21:07   0:00 /usr/lib/systemd/systemd-journald
+systemd+      86  0.0  0.3  22416 14512 ?        Ss   21:07   0:00 /usr/lib/systemd/systemd-resolved
+root          92  0.0  0.3  34732 11916 ?        Ss   21:07   0:00 /usr/lib/systemd/systemd-udevd
+root         129  0.0  0.0   2888  1948 ?        Ss   21:07   0:00 /bin/sh /usr/lib/systemd/scripts/chronyd-starter.sh -n -F 1
+root         135  0.0  0.0   4472  3136 ?        Ss   21:07   0:00 /usr/sbin/cron -f -P
+
+$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+none            1.9G     0  1.9G   0% /usr/lib/modules/6.18.54.1-microsoft-standard-WSL2
+/dev/sdb         97M   97M     0 100% /usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2
+none            1.9G  4.0K  1.9G   1% /mnt/wsl
+drivers          77G   75G  2.4G  97% /usr/lib/wsl/drivers
+/dev/sdd       1007G  1.6G  955G   1% /
+none            1.9G   36K  1.9G   1% /mnt/wslg
+none            1.9G     0  1.9G   0% /usr/lib/wsl/lib
+rootfs          1.9G  3.4M  1.9G   1% /init
+none            1.9G  512K  1.9G   1% /run
+none            1.9G     0  1.9G   0% /run/lock
+none            1.9G     0  1.9G   0% /run/shm
+none            1.9G   80K  1.9G   1% /mnt/wslg/versions.txt
+none            1.9G   80K  1.9G   1% /mnt/wslg/doc
+C:\              77G   75G  2.4G  97% /mnt/c
+D:\             161G   42G  119G  26% /mnt/d
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           1.9G     0  1.9G   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           382M   12K  382M   1% /run/user/1000
+
+$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           3.7Gi       489Mi       3.2Gi       4.1Mi       152Mi       3.3Gi
+Swap:          1.0Gi          0B       1.0Gi
